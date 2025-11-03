@@ -49,4 +49,4 @@ jobs:
             docker rm ecommerce-app || true
             
             # 4. Roda o novo container
-            docker run -d -p 8080:80 --name ecommerce-app bielzinho230/e-commerce-v6:latest
+            docker run -d -p 80:80 --name ecommerce-app bielzinho230/e-commerce-v6:latest
