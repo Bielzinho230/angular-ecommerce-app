@@ -45,7 +45,7 @@
             class="cart-dropdown__empty"
             *ngIf="cartData.products.length === 0"
           >
-            Seu carrinho está vazio.
+            Your cart is empty.
           </div>
           <div
             class="cart-dropdown__content"
@@ -82,10 +82,10 @@
             </div>
             <div class="cart-info">
               <div class="selected-amount">
-                {{ cartData.products.length }} Item(s) selecionados
+                {{ cartData.products.length }} Item(s) selected
               </div>
               <div class="total-price">
-                Total: {{ cartData.total | currency: "BRL" }}
+                Total: {{ cartData.total | currency: "USD" }}
               </div>
             </div>
             <div class="cart-cta">
@@ -146,7 +146,7 @@
     <nav>
       <ul>
         <li routerLink="/" (click)="toggleMenu()">Página Inicial</li>
-        <li routerLink="/cart" (click)="toggleMenu()">Carrinho</li>
+        <li routerLink="/cart" (click)="toggleMenu()">Produtos</li>
         <li routerLink="/profile" (click)="toggleMenu()">Perfil</li>
         <li routerLink="/order-history" (click)="toggleMenu()">
           Order History
@@ -160,7 +160,7 @@
         (click)="toggleMenu()"
         *ngIf="!isLoggedIn"
       >
-        Sign in
+        Entrar
       </button>
       <button
         nz-button
@@ -168,7 +168,7 @@
         (click)="toggleMenu()"
         *ngIf="!isLoggedIn"
       >
-        Sign up
+        login
       </button>
       <button nz-button (click)="logout() && toggleMenu()" *ngIf="isLoggedIn">
         Sign out
