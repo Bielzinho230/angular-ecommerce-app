@@ -20,10 +20,10 @@ jobs:
       - name: Build e Push da Imagem Docker
         uses: docker/build-push-action@v4
         with:
-          context: ./client
+          context: ./client # <--- A CORREÇÃO ESTÁ AQUI
           push: true
           tags: bielzinho230/e-commerce-v6:latest
-          no-cache: true  # <--- A CORREÇÃO ESTÁ AQUI
+          no-cache: true
 
   deploy:
     needs: build-e-push
